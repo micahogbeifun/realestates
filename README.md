@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About
+
+This Real Estate Web-App allows users to browse properties of the 'Sales' and or 'Rental' categories. The project makes use of the Realtor API and therefore has a geographical scope of the United States Only. Users can set parameters such a bedrooms, bathrooms, type etc. 
+
+## Features
+
+This app incorporates various components such as Routing, Auto-Complete search, Scroll-Triggered functions etc
+
 ## Available Scripts
 
 In the project directory, you can run:
