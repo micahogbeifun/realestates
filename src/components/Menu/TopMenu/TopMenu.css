@@ -1,0 +1,64 @@
+.TopMenu {
+  height: 56px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #53dad5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 3px 5px #ccc;
+}
+
+.TopMenuOne,
+.TopMenuTwo {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.TopMenuOne {
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.TopMenuTwo {
+  width: 30%;
+  min-width: 110px;
+}
+
+.DesktopOnly {
+  width: 50%;
+}
+
+.MenuAuth {
+  width: 100%;
+}
+
+.TopMenu nav {
+  height: 100%;
+}
+
+.MenuLogo {
+  height: 100%;
+  width: 30%;
+  min-width: 120px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 629px) {
+  .DesktopOnly {
+    display: none;
+  }
+  .TopMenuTwo {
+    width: 20%;
+  }
+  .TopMenuOne {
+    justify-content: flex-start;
+  }
+}

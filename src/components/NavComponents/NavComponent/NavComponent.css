@@ -1,0 +1,35 @@
+.NavComponent {
+  margin: 0 20px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.NavComponent a {
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+}
+
+.NavComponent a:hover,
+.NavComponent a:active,
+.NavComponent a.active {
+  transition: 0.3s ease;
+  color: #007b76;
+  border-bottom: 3px solid #007b76;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+@media (max-width: 629px) {
+  .NavComponent {
+    margin: 20px 0;
+  }
+}

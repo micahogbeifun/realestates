@@ -1,0 +1,32 @@
+.PlaceList {
+  padding: 20px;
+}
+
+.place-title {
+  display: inline;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(0, 34, 33);
+}
+
+.ListGrid {
+  padding: 50px 0;
+  overflow-x: visible;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 20px;
+  position: relative;
+  list-style: none;
+}
+
+@media (max-width: 949px) {
+  .ListGrid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .ListGrid {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+  }
+}

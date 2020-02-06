@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+.SearchBar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 2px #ccc;
+}
+
+.InputWrapper {
+  font-size: 14px;
+  height: 36px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+}
+
+.InputWrapper input {
+  outline: none;
+  padding: 6px 12px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.InputWrapper.Query {
+  padding: 0;
+  width: 275px;
+  margin-left: 5px;
+  width: 275px;
+}
+.InputWrapper.Save {
+  border: 1px solid #00cec6;
+  cursor: pointer;
+}
+.InputWrapper ion-icon {
+  cursor: pointer;
+}
+.InputWrapper.Save:hover {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  background-color: #53dad5;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.Params {
+  display: flex;
+}
+
+.InputWrapper.Query input {
+  padding: 6px 12px;
+  border: none;
+  width: 235px;
+  height: 100%;
+  font-size: 14px;
+}
+
+.SearchBtn,
+.clearBtn {
+  height: 100%;
+  width: 40px;
+  font-size: 20px;
+
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.SearchBtn {
+  color: #fff;
+  background-color: #00cec6;
+}
+
+.Error::placeholder {
+  color: red;
+}
+.Input::placeholder {
+  color: #ccc;
+}
+
+.SearchBtn:hover {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  color: #007b76;
+  font-size: 25px;
+}
+.clearBtn:hover {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  color: #00cec6;
+}
+
+.InputWrapper {
+  position: relative;
+}
+
+.Dropdown {
+  z-index: 10;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  top: 40px;
+  border: 1px solid #ccc;
+  left: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* .InputWrapper:hover .Dropdown {
+  display: flex;
+} */
+.InputWrapper.bed,
+.InputWrapper.baths,
+.InputWrapper.price {
+  width: 50%;
+}
+.InputWrapper.type,
+.InputWrapper.search {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.InputWrapper.type {
+  margin: 5px;
+}
+
+.InputWrapper.search {
+  padding: 5px;
+  margin: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.InputWrapper.type:hover,
+.InputWrapper.search:hover {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  background-color: #53dad5;
+  color: #fff;
+}
+
+.InputWrapper.bed input,
+.InputWrapper.baths input,
+.InputWrapper.price input,
+.InputWrapper.type input {
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 649px) {
+  .SearchBar {
+    width: 100%;
+    padding: 0 10px;
+    flex-direction: column;
+    height: 90px;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .InputWrapper.Query {
+    margin: 0;
+    width: 100%;
+  }
+  .InputWrapper.Query input {
+    width: 100%;
+  }
+  .Dropdown {
+    top: 50px;
+  }
+  .InputWrapper.Query .Dropdown {
+    top: 100px;
+  }
+}
