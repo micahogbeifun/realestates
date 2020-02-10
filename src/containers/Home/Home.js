@@ -26,7 +26,10 @@ class Home extends Component {
     const arrived = position.bottom <= window.innerHeight;
 
     this.setState(prevState => {
-      const limit = arrived ? prevState.limit + 20 : prevState.limit;
+      const limit =
+        arrived && prevState.limit <= 180
+          ? prevState.limit + 20
+          : prevState.limit;
       return { limit };
     });
   };

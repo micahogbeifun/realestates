@@ -23,8 +23,9 @@ const PlaceList = props => {
             : null}
         </h1>
         <div className="ListGrid">
-          {propertiesArray.map(property => (
+          {propertiesArray.map((property, i) => (
             <Place
+              index={i}
               loading={props.loading}
               meta={meta}
               buy={props.buy}

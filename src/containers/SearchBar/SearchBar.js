@@ -68,10 +68,10 @@ class SearchBar extends Component {
         min: "",
         max: ""
       },
-      // save: {
-      //   name: "save",
-      //   placeholder: "Save Search"
-      // }
+      save: {
+        name: "save",
+        placeholder: "Save Search"
+      }
     },
     error: true
   };

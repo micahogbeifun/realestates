@@ -19,13 +19,18 @@ const Place = props => {
   let array = address ? regexp.exec(address) : null;
   const steetUrl = array ? array[1].split(" ").join("-") : null;
   const cityUrl = `${city.split(" ").join("-")}_${state}`;
-  const idUrl = `M${property_id.substring(0, 5)}-${property_id.substring(
-    5,
-    property_id.length
-  )}`;
+  console.log(props.index);
+  const idUrl = property_id
+    ? `M${property_id.substring(0, 5)}-${property_id.substring(
+        5,
+        property_id.length
+      )}`
+    : null;
   const externalUrl = props.buy
     ? rdc_web_url
-    : `https://www.realtor.com/realestateandhomes-detail/${steetUrl}_${cityUrl}_${array[3]}_${idUrl}`;
+    : property_id
+    ? `https://www.realtor.com/realestateandhomes-detail/${steetUrl}_${cityUrl}_${array[3]}_${idUrl}`
+    : null;
   return (
     <a href={externalUrl} target="_blank" rel="noopener noreferrer">
       <div
