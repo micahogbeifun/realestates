@@ -12,16 +12,32 @@ const PlaceList = props => {
     const propertiesArray = [];
     for (let key in listings)
       if (key < props.limit) propertiesArray.push(listings[key]);
-    items = (
-      <Fragment>
+    let header = (
+      <h1 className="place-title">
+        {meta.tracking_params.searchCityState} Properties
+        {meta.tracking_params.channel === "for_sale"
+          ? " For Sale"
+          : "for_rent"
+          ? " For Rent"
+          : null}
+      </h1>
+    );
+    if (propertiesArray.length === 0) {
+      header = (
         <h1 className="place-title">
-          {meta.tracking_params.searchCityState} Properties
+          No Properties{" "}
           {meta.tracking_params.channel === "for_sale"
             ? " For Sale"
             : "for_rent"
             ? " For Rent"
-            : null}
+            : null}{" "}
+          found in {meta.tracking_params.searchCityState}
         </h1>
+      );
+    }
+    items = (
+      <Fragment>
+        {header}
         <div className="ListGrid">
           {propertiesArray.map((property, i) => (
             <Place

@@ -6,5 +6,3 @@ const fs = require("fs");
 // });
 
 // fs.writeFileSync("./city_list.json", JSON.stringify(main, null, 2), "utf-8");
-
-console.log(cities[0]);

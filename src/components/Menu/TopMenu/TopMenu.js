@@ -2,7 +2,6 @@ import React from "react";
 import "./TopMenu.css";
 import Logo from "../../Logo/Logo";
 import NavComponents from "../../NavComponents/NavComponents";
-import AuthNavComponents from "../../NavComponents/AuthNavComponents/AuthNavComponents";
 import MenuToggle from "../MenuToggle/MenuToggle";
 
 const TopMenu = props => (
@@ -16,11 +15,6 @@ const TopMenu = props => (
         <NavComponents />
       </nav>
     </div>
-    {/* <div className="TopMenuTwo">
-      <nav className="MenuAuth">
-        <AuthNavComponents isAuthenticated={props.isAuth} />
-      </nav>
-    </div> */}
   </header>
 );
 

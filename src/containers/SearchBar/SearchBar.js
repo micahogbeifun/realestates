@@ -2,17 +2,13 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng
-} from "react-places-autocomplete";
+import PlacesAutocomplete from "react-places-autocomplete";
 
 import "./SearchBar.css";
 import { fetchBuys } from "../../store/actions/places";
 
 class SearchBar extends Component {
   componentDidMount() {
-    console.log(this.state.searchType);
     this.props.fetchBuys(this.state.searchType, {
       city: "Los Angeles",
       state_code: "CA"
@@ -115,7 +111,6 @@ class SearchBar extends Component {
         state_code: "CA"
       });
     }
-    console.log(this.props.match);
   };
   onSubmitHandler = () => {
     this.switchIcon("clear");
@@ -171,7 +166,7 @@ class SearchBar extends Component {
     }
     const data = {};
     keyArray.forEach((key, index) => (data[key] = valueArray[index]));
-    console.log(data);
+
     this.props.fetchBuys(this.state.searchType, data);
   };
   validCity = value => {

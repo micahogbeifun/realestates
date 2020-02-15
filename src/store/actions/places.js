@@ -66,6 +66,6 @@ export const fetchBuys = (type, data) => async dispatch => {
 //   req.end(function(res) {
 //     if (res.error) throw new Error(res.error);
 
-//     console.log(res.body);
+//
 //   });
 // };

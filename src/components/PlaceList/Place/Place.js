@@ -17,20 +17,22 @@ const Place = props => {
   //const regex = /[0-9, ,a-zA-Z]+ in/g;
   let regexp = /([0-9,a-z,A-Z,\s,-]+) in ([a-z,A-Z,\s,-]+), ([0-9]+)/g;
   let array = address ? regexp.exec(address) : null;
+  //console.log(array);
   const steetUrl = array ? array[1].split(" ").join("-") : null;
   const cityUrl = `${city.split(" ").join("-")}_${state}`;
-  console.log(props.index);
+
   const idUrl = property_id
     ? `M${property_id.substring(0, 5)}-${property_id.substring(
         5,
         property_id.length
       )}`
     : null;
-  const externalUrl = props.buy
-    ? rdc_web_url
-    : property_id
-    ? `https://www.realtor.com/realestateandhomes-detail/${steetUrl}_${cityUrl}_${array[3]}_${idUrl}`
-    : null;
+  const externalUrl =
+    props.buy && array
+      ? rdc_web_url
+      : property_id && array
+      ? `https://www.realtor.com/realestateandhomes-detail/${steetUrl}_${cityUrl}_${array[3]}_${idUrl}`
+      : null;
   return (
     <a href={externalUrl} target="_blank" rel="noopener noreferrer">
       <div
