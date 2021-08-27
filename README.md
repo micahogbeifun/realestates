@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About
 
-This Real Estate Web-App allows users to browse properties of various categories. </br>The project makes use of the Realtor API and therefore has a geographical scope of the United States Only. Users can set parameters such a bedrooms, bathrooms, type etc. 
+Browse real estate properties. 
 
 ## Features
 
